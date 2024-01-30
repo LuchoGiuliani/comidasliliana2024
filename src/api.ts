@@ -1,9 +1,11 @@
 import { Menu } from "./types";
 const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQTr3_AXLB-lk9-acoDieqmcqIjMeVMzYOS1wmlz7XZuIqnz_X3qgwfRzO9XUzfkKfOeXT2du0UOGGP/pub?output=tsv"
+const timestamp = new Date().getTime();
+const urlWithTimestamp = `${url}?timestamp=${timestamp}`;
 const api = {
   menu: {
     list: async (): Promise<Menu[]> => {
-            return fetch(url, { next: { tags: ["matches"], }, })
+            return fetch(urlWithTimestamp, { next: { tags: ["matches"], }, })
                 .then((res) => res.text())
       .then((text) => { 
         return text.split("\n").slice(1).map((row) => {
