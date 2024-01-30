@@ -6,7 +6,9 @@ const api = {
   menu: {
     list: async (): Promise<Menu[]> => {
       return fetch(url, {
-        cache: 'no-store',
+        headers: {
+            'Cache-Control': 'no-cache, must-revalidate',
+          },
         next: { tags: ["matches"] },
       })
         .then((res) => res.text())
