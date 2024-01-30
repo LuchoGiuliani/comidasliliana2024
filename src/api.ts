@@ -7,7 +7,7 @@ const api = {
     list: async (): Promise<Menu[]> => {
       return fetch(url, {
         headers: {
-            'Cache-Control': 'no-cache, must-revalidate',
+            'Cache-Control': 'must-revalidate',
           },
         next: { tags: ["matches"] },
       })
