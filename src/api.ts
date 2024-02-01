@@ -14,13 +14,14 @@ const api = {
             .split("\n")
             .slice(1)
             .map((row) => {
-              const [id, name, price, isActive] = row.trim().split("\t");
+              const [id, name, price, isActive, category] = row.trim().split("\t");
 
               return {
                 id: parseInt(id),
                 name,
                 price: parseInt(price),
                 isActive,
+                category,
               };
             });
         });
