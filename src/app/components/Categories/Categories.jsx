@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Categories = () => {
+function Categories() {
   const { selectedCategory, updateSelectedCategory } = useFoodContext();
   const allCategories = ["Minutas", "Ensaladas", "Platos", "Guarniciones"];
 
@@ -10,7 +10,7 @@ const Categories = () => {
       {allCategories.map((category, index) => (
         <button
           key={index}
-          className={selectedCategory === category.toLowerCase() ? 'active' : ''}
+          className={selectedCategory === category.toLowerCase() ? "active" : ""}
           onClick={() => updateSelectedCategory(category.toLowerCase())}
         >
           {category}
@@ -18,6 +18,6 @@ const Categories = () => {
       ))}
     </section>
   );
-};
+}
 
 export default Categories;

@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const Title = () => {
+function Title() {
   return (
-    <section className='flex flex-col justify-center items-center  p-6 '>
-        <h1 className='  font-bold text-[32px] text-center'>La casa de Liliana</h1>
-        <h2 className='  font-thin text-[24px]'>Comidas Caseras</h2>
+    <section className="flex flex-col items-center justify-center  p-6 ">
+      <h1 className="  text-center text-[32px] font-bold">La casa de Liliana</h1>
+      <h2 className="  text-[24px] font-thin">Comidas Caseras</h2>
     </section>
-  )
+  );
 }
 
-export default Title
+export default Title;

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const PayMethod = () => {
+function PayMethod() {
   return (
-    <div className='border border-r-0 border-[#FFFDCE] bg-[#2E2D2B]  p-2 ml-[290px] rounded-s-full flex  justify-end gap-2 '><img src="/cuentaDni.png" alt="" /><img src="/mercadopago.png" alt="" /></div>
-  )
+    <div className="ml-[290px] flex justify-end gap-2  rounded-s-full border border-r-0 border-[#FFFDCE]  bg-[#2E2D2B] p-2 ">
+      <img alt="" src="/cuentaDni.png" />
+      <img alt="" src="/mercadopago.png" />
+    </div>
+  );
 }
 
-export default PayMethod
+export default PayMethod;
