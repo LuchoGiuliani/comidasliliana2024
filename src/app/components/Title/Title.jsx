@@ -1,5 +1,3 @@
-import React from "react";
-
 function Title() {
   return (
     <section className="flex flex-col items-center justify-center  p-6 ">

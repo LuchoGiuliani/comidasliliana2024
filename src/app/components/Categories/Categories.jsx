@@ -1,12 +1,9 @@
-import React from 'react';
-
-
 function Categories() {
-  const { selectedCategory, updateSelectedCategory } = useFoodContext();
+  const {selectedCategory, updateSelectedCategory} = useFoodContext();
   const allCategories = ["Minutas", "Ensaladas", "Platos", "Guarniciones"];
 
   return (
-    <section className="flex gap-4 justify-center items-center pt-8">
+    <section className="flex items-center justify-center gap-4 pt-8">
       {allCategories.map((category, index) => (
         <button
           key={index}

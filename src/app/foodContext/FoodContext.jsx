@@ -1,5 +1,5 @@
-"use client"
-import React, { createContext, useContext, useState } from 'react';
+"use client";
+import {createContext, useContext, useState} from "react";
 
 const FoodContext = createContext();
 
@@ -7,7 +7,7 @@ export const useFoodContext = () => {
   return useContext(FoodContext);
 };
 
-export const FoodProvider = ({ children }) => {
+export function FoodProvider({children}) {
   const [menu, setMenu] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -20,9 +20,8 @@ export const FoodProvider = ({ children }) => {
   };
 
   return (
-    <FoodContext.Provider value={{ menu, selectedCategory, updateMenu, updateSelectedCategory }}>
+    <FoodContext.Provider value={{menu, selectedCategory, updateMenu, updateSelectedCategory}}>
       {children}
     </FoodContext.Provider>
   );
-};
-
+}
