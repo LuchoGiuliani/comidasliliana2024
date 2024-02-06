@@ -7,3 +7,14 @@
   color: CanvasText;
   background-color: Canvas;
 }
+
+*{
+  font-family: 'Cormorant', serif;
+  color: #FFFDCE
+}
+
+
+.container_menu {
+  background-image: url("/bgMenu.png");
+  background-size: cover;
+}

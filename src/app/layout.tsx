@@ -1,11 +1,17 @@
 /* eslint-disable prettier/prettier */
 import type { Metadata } from "next";
 
+import Head from "next/head";
 
 
 import "./globals.css";
 import Footer from "./components/Footer/Footer";
 import Title from "./components/Title/Title";
+import SwitchMenu from "./components/SwitchMenu/SwitchMenu"
+import BgFood from "./components/BgFood/BgFood"
+import Navbar from "./components/Navbar/Navbar"
+import PayMethod from "./components/PayMethod/PayMethod"
+import Congelados from "./components/Congelados/Congelados"
 
 export const metadata: Metadata = {
   title: "comidasliliana2024",
@@ -19,11 +25,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="dark container m-auto grid min-h-screen grid-rows-[auto,1fr,auto] bg-background px-4 font-sans antialiased">
+       <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+        </Head>
+      <body className="bg-[#444749] pb-12">
+        <BgFood />
         <Title />
-
-        <main className="py-8">{children}</main>
-        <Footer />
+        <SwitchMenu />
+        <main className="">{children}</main>
+        <PayMethod />
+        <Congelados />
+        <Navbar />
+        
       </body>
     </html>
   );
