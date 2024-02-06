@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <section className="fixed bottom-0 mx-20 rounded-t-md bg-[#2E2D2B] p-2">
+    <section className="fixed bottom-0 mx-[30%] rounded-t-md bg-[#2E2D2B] p-2">
       <div className="flex items-center justify-center ">
         <a href="https://www.instagram.com/luchogiuliani/">
           <img alt="Instagram" className="mr-4 h-4 w-4" src="/ig.png" />
