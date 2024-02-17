@@ -3,4 +3,5 @@ export interface Menu {
   name: string;
   price: number;
   isActive: string;
+  category: string;
 }
